@@ -24,3 +24,20 @@ class Player(GameSprite):
             self.rect.y -= self.speed
         if keys[K_DOWN] and self.rect.y < 500 - 80:
             self.rect.y += self.speed
+
+wight = 500
+height = 500
+
+window = display.set_mode((wight, height))
+window.fill((225, 225, 100))
+
+clock = time.Clock()
+FPS = 60
+
+start = True
+while start == True:
+    for e in event.get():
+        if e.type == QUIT:
+            start = False
+    display.update
+    clock.tick(FPS)
